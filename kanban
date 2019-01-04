@@ -114,11 +114,11 @@ get_statuses(){
 
 add_interactive(){
   echo "enter description:"
-  read -p "> " description 
+  read -p "$PS2" description
   echo "enter one of statuses: ${statuses[@]}"
-  read -p "> " status
+  read -p "$PS2" status
   echo "enter one of tags: $(tags)"
-  read -p "> " tag
+  read -p "$PS2" tag
   add "$status" "$tag" "$description"
 }
 
